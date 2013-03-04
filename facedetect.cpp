@@ -5,7 +5,7 @@ FaceDetect::FaceDetect()
 {
     cascadeFile = "haarcascade_frontalface_alt2.xml";
     cascade = (CvHaarClassifierCascade *) cvLoad(cascadeFile.toUtf8());
-    flags = CV_HAAR_FIND_BIGGEST_OBJECT|CV_HAAR_DO_ROUGH_SEARCH;
+//zp    flags = CV_HAAR_FIND_BIGGEST_OBJECT|CV_HAAR_DO_ROUGH_SEARCH;
 
     // Storage for the rectangles detected
     storage = cvCreateMemStorage(0);

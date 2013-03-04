@@ -1,4 +1,17 @@
-TARGET = QTFaceRecForPC
+QT       += core gui
+
+TARGET = QTFaceRecForARM
+
+INCLUDEPATH += /work/code/opencv/include/opencv
+
+LIBS +=-lpthread \
+-lrt \
+-lm \
+ /work/code/opencv/lib/libcv.so \
+/work/code/opencv/lib/libcxcore.so \
+/work/code/opencv/lib/libcvaux.so \
+/work/code/opencv/lib/libml.so \
+/work/code/opencv/lib/libhighgui.so \
 
 HEADERS += \
     videodevice.h \
@@ -21,10 +34,6 @@ SOURCES += \
     posix_qextserialport.cpp \
     thread.cpp
 
-unix {
-    CONFIG += link_pkgconfig
-    PKGCONFIG += /usr/local/lib/pkgconfig/opencv-arm.pc
-}
 
 FORMS += \
     mainwindow.ui
